@@ -69,7 +69,7 @@
             {
                 for (var customer of this.customers)
                 {
-                    if (customer.CustomerID == this.id)
+                    if (customer.CustomerID.toLowerCase() == this.id.toLowerCase())
                     {
                         this.customer = customer;
                         this.encontrado = true;
