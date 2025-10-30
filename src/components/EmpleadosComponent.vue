@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Empleados</h1>
+        <h1>EMPLEADOS</h1>
         <hr/>
         <form v-on:submit.prevent="mostrarEmpleado()">
             <h2>Elige el empleado</h2>
@@ -12,9 +12,9 @@
             <button>Mostrar detalles</button>
             <hr/>
             <div v-if="empleado">
-                <h3>Apellido: {{empleado.apellido}}</h3>
-                <h3>Oficio: {{empleado.oficio}}</h3>
-                <h3>Salario: {{empleado.salario}} euros</h3>
+                <h3>APELLIDO: {{empleado.apellido}}</h3>
+                <h3>OFICIO: {{empleado.oficio}}</h3>
+                <h3>SALARIO: {{empleado.salario}} €</h3>
             </div>
         </form>
     </div>
