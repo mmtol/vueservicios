@@ -12,9 +12,10 @@
 
 <script>
     import axios from 'axios';
+    import Global from './../Global'
 
     //las variables pra que sean accesibles desde cualquier forma se declaran aqui
-    let url = "https://apicochespaco.azurewebsites.net/";
+    let url = Global.apiCoches;
 
     export default 
     {
