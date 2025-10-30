@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Menu</h1>
+    <h1>MENU</h1>
     <MenuComponent/>
     <router-view></router-view>
   </div>
