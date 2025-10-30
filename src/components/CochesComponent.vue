@@ -4,8 +4,8 @@
         <div v-for="coche in coches" :key="coche">
             <h2>{{coche.marca}}</h2>
             <img :src="coche.imagen"/>
-            <h3>{{coche.modelo}}</h3>
-            <h3>{{coche.conductor}}</h3>
+            <h3>Modelo: {{coche.modelo}}</h3>
+            <h3>Conductor: {{coche.conductor}}</h3>
         </div>
     </div>
 </template>
