@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Coches</h1>
+        <h1>COCHES</h1>
         <div v-for="coche in coches" :key="coche">
             <h2>{{coche.marca}}</h2>
             <img :src="coche.imagen"/>
