@@ -1,14 +1,18 @@
 <template>
-  <EmpleadosComponent/>
+  <div>
+    <h1>Menu</h1>
+    <MenuComponent/>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import EmpleadosComponent from './components/EmpleadosComponent.vue'
+import MenuComponent from './components/MenuComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    EmpleadosComponent
+    MenuComponent
   }
 }
 </script>
