@@ -12,9 +12,9 @@
             <button>Mostrar detalles</button>
             <hr/>
             <div v-if="empleado">
-                <h3>{{empleado.apellido}}</h3>
-                <h3>{{empleado.oficio}}</h3>
-                <h3>{{empleado.salario}} euros</h3>
+                <h3>Apellido: {{empleado.apellido}}</h3>
+                <h3>Oficio: {{empleado.oficio}}</h3>
+                <h3>Salario: {{empleado.salario}} euros</h3>
             </div>
         </form>
     </div>
