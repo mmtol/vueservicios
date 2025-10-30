@@ -2,7 +2,7 @@
     <div>
         <h1>Customers</h1>
         <hr/>
-        <table>
+        <table class="table table-danger">
             <thead>
                 <tr>
                     <th>ID</th>

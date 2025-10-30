@@ -1,14 +1,14 @@
 <template>
-  <CustomersComponent/>
+  <EmpleadosComponent/>
 </template>
 
 <script>
-import CustomersComponent from './components/CustomersComponent.vue'
+import EmpleadosComponent from './components/EmpleadosComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    CustomersComponent
+    EmpleadosComponent
   }
 }
 </script>
