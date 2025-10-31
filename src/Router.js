@@ -3,10 +3,15 @@ import CochesComponent from './components/CochesComponent.vue'
 import CustomersComponent from './components/CustomersComponent.vue'
 import EmpleadosComponent from './components/EmpleadosComponent.vue'
 import OficiosComponent from './components/OficiosComponent.vue'
+import HomeComponent from './components/HomeComponent.vue'
 
 //array con las rutas
 const rutas=
 [
+    {
+        path:"/",
+        component:HomeComponent
+    },
     {
         path:"/coches",
         component:CochesComponent
