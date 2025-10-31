@@ -3,17 +3,20 @@ import Global from "./../Global";
 
 export default class ServiceCoches
 {
-    getCoches = new Promise(function(resolve)
+    getCoches()
     {
-        var coches = [];
-
-        var url = Global.apiCoches;
-        var endPoint = "webresources/coches";
-
-        axios.get(url+endPoint).then(response =>
+        return new Promise(function(resolve)
         {
-            coches = response.data;
-            resolve(coches);
+            var coches = [];
+
+            var url = Global.apiCoches;
+            var endPoint = "webresources/coches";
+
+            axios.get(url+endPoint).then(response =>
+            {
+                coches = response.data;
+                resolve(coches);
+            })
         })
-    })
+    }
 }

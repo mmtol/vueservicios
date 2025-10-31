@@ -28,7 +28,7 @@
         {
             cargarCoches()
             {
-                service.getCoches.then(result => 
+                service.getCoches().then(result => 
                 {
                     this.coches = result;
                 })

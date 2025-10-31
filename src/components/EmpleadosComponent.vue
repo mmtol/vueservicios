@@ -21,10 +21,9 @@
 </template>
 
 <script>
-    import Global from './../Global';
-    import axios from 'axios';
+    import ServiceEmpleados from './../services/ServiceEmpleados';
 
-    let url = Global.apiEmpleados;
+    const service = new ServiceEmpleados();
 
     export default 
     {
@@ -41,19 +40,17 @@
         {
             sacarEmpleados()
             {
-                var endPoint="api/Empleados";
-                axios.get(url+endPoint).then(response =>
-                    {
-                        this.empleados = response.data;
-                    })
+                service.sacarEmpleados().then(result =>
+                {
+                    this.empleados = result;
+                })
             },
             mostrarEmpleado()
             {
-                var endPoint = "api/Empleados/"+this.id;
-                axios.get(url+endPoint).then(response =>
-                    {
-                        this.empleado = response.data;
-                    })
+                service.mostrarEmpleado(this.id).then(result =>
+                {
+                    this.empleado = result;
+                })
             }
         },
         mounted()

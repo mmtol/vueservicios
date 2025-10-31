@@ -23,10 +23,9 @@
 </template>
 
 <script>
-    import axios from 'axios';
-    import Global from './../Global';
+    import ServiceEmpleados from './../services/ServiceEmpleados';
 
-    let url = Global.apiEmpleados;
+    const service = new ServiceEmpleados();
 
     export default 
     {
@@ -40,21 +39,20 @@
         },
         methods:
         {
-            loadEmpleados()
+            loadEmpleadosPorOficio()
             {
                 var oficio = this.$route.params.oficio;
                 this.oficio = oficio;
-                var endPoint = "api/Empleados/EmpleadosOficio/"+oficio;
 
-                axios.get(url+endPoint).then(response =>
+                service.loadEmpleadosPorOficio(oficio).then(result =>
                 {
-                    this.empleados = response.data;
+                    this.empleados = result;
                 })
             }
         },
         mounted()
         {
-            this.loadEmpleados();
+            this.loadEmpleadosPorOficio();
         },
         watch:
         {
@@ -62,7 +60,7 @@
             {
                 if (nextVal != oldVal)
                 {
-                    this.loadEmpleados();
+                    this.loadEmpleadosPorOficio();
                 }
             }
         }
