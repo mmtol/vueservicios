@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Oficios</h1>
+        <h1>EMPLEADOS QUE SEAN {{ oficio }}</h1>
         <table class="table table-warning">
             <thead>
                 <tr>
@@ -34,7 +34,8 @@
         data()
         {
             return{
-                empleados:[]
+                empleados:[],
+                oficio:""
             }
         },
         methods:
@@ -42,6 +43,7 @@
             loadEmpleados()
             {
                 var oficio = this.$route.params.oficio;
+                this.oficio = oficio;
                 var endPoint = "api/Empleados/EmpleadosOficio/"+oficio;
 
                 axios.get(url+endPoint).then(response =>
