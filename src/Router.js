@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import CochesComponent from './components/CochesComponent.vue'
 import CustomersComponent from './components/CustomersComponent.vue'
 import EmpleadosComponent from './components/EmpleadosComponent.vue'
+import OficiosComponent from './components/OficiosComponent.vue'
 
 //array con las rutas
 const rutas=
@@ -17,6 +18,10 @@ const rutas=
     {
         path:"/empleados",
         component:EmpleadosComponent
+    },
+    {
+        path:"/oficiosComponent/:oficio",
+        component:OficiosComponent
     }
 ]
 
