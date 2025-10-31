@@ -11,11 +11,9 @@
 </template>
 
 <script>
-    import axios from 'axios';
-    import Global from './../Global'
+    import ServiceCoches from './../services/ServiceCoches';
 
-    //las variables pra que sean accesibles desde cualquier forma se declaran aqui
-    let url = Global.apiCoches;
+    const service = new ServiceCoches();
 
     export default 
     {
@@ -30,12 +28,10 @@
         {
             cargarCoches()
             {
-                var endPoint = "webresources/coches";
-                axios.get(url+endPoint).then(response =>
-                    {
-                        this.coches = response.data;
-                    }
-                )
+                service.getCoches.then(result => 
+                {
+                    this.coches = result;
+                })
             }
         },
         mounted()
